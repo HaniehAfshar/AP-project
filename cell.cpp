@@ -47,11 +47,13 @@ class genome{
 
     void jahesh_koochak(char a, char b, int n){
         int i=0;
-        while(n--){
-            if (dna.rna[i] == a)
+        while(n){
+            if (dna.rna[i] == a){
                 dna.rna[i] = b;
-            if (dna.mokamel[i]==b)
                 dna.mokamel[i]=a;
+                n--;
+                }
+            i++;
         }
     }
 
