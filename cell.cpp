@@ -45,6 +45,16 @@ class genome{
         return ans;
     }
 
+    void jahesh_koochak(char a, char b, int n){
+        int i=0;
+        while(n--){
+            if (dna.rna[i] == a)
+                dna.rna[i] = b;
+            if (dna.mokamel[i]==b)
+                dna.mokamel[i]=a;
+        }
+    }
+
 };
 
 
@@ -52,8 +62,6 @@ int main(){
 
     genome gen;
     string rna;
-    cin>>rna;
-    gen.rna_set(rna);
     char response;
     cout<<"Aya mokamel RNA ra dar dast darid?[Y/N] : "; cin>>response;
     if (response=='Y'){
@@ -70,7 +78,6 @@ int main(){
 
     else{
         cout<<endl<<"Invalid input";
-        break;
     }
 
     return 0;
